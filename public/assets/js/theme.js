@@ -383,6 +383,6 @@ jQuery(function($) {
     var $wrapper = $(this).closest('.inner-dect-wrapper').find('.itinerary-wrapper');
     $wrapper.slideToggle();
     var buttonText = $(this).text();
-    $(this).text(buttonText === 'More' ? 'Close' : 'More');
+    $(this).text(buttonText === 'Read More' ? 'Close' : 'Read More');
   });
 });
