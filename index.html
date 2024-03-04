@@ -64,15 +64,7 @@
               <h4 class="fw-bold text-danger mb-3">Best Destinations around the kochi</h4>
               <h1 class="hero-title">Travel, enjoy and live a new and full life</h1>
               <p class="mb-4 fw-medium">Traveling is not just a journey across distances; it's an exploration<br class="d-none d-xl-block" /> of the soul, a passport to new perspectives, and a collection<br class="d-none d-xl-block" /> of moments that weave the tapestry of a life well-lived.</p>
-              <div class="text-center text-md-start"> <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" href="#!" role="button">Find out more</a>
-                <!-- <div class="w-100 d-block d-md-none"></div><a href="#!" role="button" data-bs-toggle="modal" data-bs-target="#popupVideo"><span class="btn btn-danger round-btn-lg rounded-circle me-3 danger-btn-shadow"> <img src="assets/img/hero/play.svg" width="15" alt="paly"/></span></a><span class="fw-medium">Play Demo</span>
-                <div class="modal fade" id="popupVideo" tabindex="-1" aria-labelledby="popupVideo" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                      <iframe class="rounded" style="width:100%;max-height:500px;" height="500px" src="https://www.youtube.com/embed/_lhdhL4UDIo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-                    </div>
-                  </div>
-                </div> -->
+              <div class="text-center text-md-start"> <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow" target="_blank" href="https://wa.me/+916238373065/??text=Book%20Athirapally%20Package" role="button">Find out more</a>
               </div>
             </div>
           </div>
@@ -321,17 +313,26 @@
             <div class="position-absolute start-0 bottom-0 ms-3 z-index--1 d-none d-sm-block"> <img src="assets/img/cta/shape-bg1.png" style="max-width: 340px;" alt="cta shape" /></div>
             <div class="row justify-content-center">
               <div class="col-lg-8 col-md-10">
-                <h2 class="text-secondary lh-1-7 mb-7">Send us a message</h2>
+                <h2 class="text-secondary lh-1-7 mb-7">Contact Us</h2>
                 <form class="row g-3 align-items-center w-lg-75 mx-auto">
                   <div class="col-sm">
                     <div class="input-group-icon">
-                      <input class="form-control form-little-squirrel-control" type="text" id="messageInput" placeholder="Enter your Message"/><img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail" />
-                     
+                      <a href="tel:+919072747557" style="text-decoration: none;"> <input class="form-control form-little-squirrel-control" type="text" readonly id="messageInput1" placeholder="+91 907 274 7557"/><img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail" /></a>
                     </div>
                   </div>
                   <div class="col-sm-auto">
-                    <button onclick="sendMessage()" class="btn btn-danger orange-gradient-btn fs--1">Send Message</button>
-                    <!-- <a href="https://wa.me/+919995987819/??text=Your%20Message%20Here" data-action="share/whatsapp/share" class="btn btn-danger orange-gradient-btn fs--1">Send Message</a> -->
+                    <button onclick="sendMessage(+919072747557,'')" class="btn btn-danger orange-gradient-btn fs--1"><img class="input-box-icon" style="margin-right: 10px;" src="assets/img/cta/whatsapp.svg" width="20" alt="whatsapp" />Send Message</button>
+                  </div>
+                </form>
+                <br>
+                <form class="row g-3 align-items-center w-lg-75 mx-auto">
+                  <div class="col-sm">
+                    <div class="input-group-icon">
+                      <a href="tel:+916238373065" style="text-decoration: none;"> <input class="form-control form-little-squirrel-control" type="text" readonly id="messageInput2" placeholder="+91 623 837 3065"/><img class="input-box-icon" src="assets/img/cta/mail.svg" width="17" alt="mail" /></a>
+                    </div>
+                  </div>
+                  <div class="col-sm-auto">
+                    <button onclick="sendMessage(+916238373065,'hhh')" class="btn btn-danger orange-gradient-btn fs--1"><img class="input-box-icon" style="margin-right: 10px;" src="assets/img/cta/whatsapp.svg" width="20" alt="whatsapp" />Send Message</button>
                   </div>
                 </form>
               </div>
@@ -357,6 +358,7 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>
@@ -364,18 +366,9 @@
     <script src="vendors/fontawesome/all.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
-      function sendMessage() {
-          // Get the message from the textbox
-          var message = document.getElementById("messageInput").value;
-      
-          // Format the message for the WhatsApp link
-          var encodedMessage = encodeURIComponent(message);
-      
-          // Replace the following number with the recipient's phone number (including country code)
-          var phoneNumber = "+919995987819";
-      
+      function sendMessage(phoneNumber,message) {
           // Create the WhatsApp link
-          var whatsappLink = "https://wa.me/" + phoneNumber + "/??text=" + encodedMessage;
+          var whatsappLink = "https://wa.me/" + phoneNumber + "/??text=" + encodeURIComponent(message);
       
           // Open a new window/tab with the WhatsApp link
           window.open(whatsappLink, "_blank");
