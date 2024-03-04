@@ -375,3 +375,14 @@ docReady(navbarInit);
 docReady(detectorInit);
 docReady(scrollToTop);
 //# sourceMappingURL=theme.js.map
+
+
+jQuery(function($) {
+  $('.toggle-btn a').on('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    var $wrapper = $(this).closest('.inner-dect-wrapper').find('.itinerary-wrapper');
+    $wrapper.slideToggle();
+    var buttonText = $(this).text();
+    $(this).text(buttonText === 'Read More' ? 'Close' : 'Read More');
+  });
+});
